@@ -11,7 +11,7 @@
 	<groupId>com.containerizacaoJava</groupId>
 	<artifactId>demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Containerizacao Java</name>
+	<name>desafio-docker</name>
 	<description>Desafio de Containerização em Java com Repositório Git</description>
 	<properties>
 		<java.version>17</java.version>
@@ -21,7 +21,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		<dependency>
+   			<groupId>org.springframework.boot</groupId>
+   			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -30,6 +33,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>${project.name}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
